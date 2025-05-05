@@ -1,1 +1,14 @@
-
+{
+  "manifest_version": 3,
+  "name": "Right Side Image Mover",
+  "version": "1.0",
+  "description": "Moves all images on a page to the right side.",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
